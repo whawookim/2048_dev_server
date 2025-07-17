@@ -22,7 +22,12 @@ namespace _2048_dev_server.Controllers
             var user = _db.Users.FirstOrDefault(u => u.UserId == request.UserId);
 
             if (user == null)
-                return Unauthorized();
+                return Unauthorized(new { 
+                    error = new ApiError {
+                        code = "Unauthorized", 
+                        message = "user is null", 
+                        field = "Nickname"
+                    }});
 
             user.NickName = request.NewNickname;
             _db.SaveChanges();
@@ -31,11 +36,12 @@ namespace _2048_dev_server.Controllers
             {
                 { $"{nameof(Models.User.NickName)}", user.NickName }
             };
+            
+            var result = new Dictionary<string, object> {
+                [$"{nameof(Models.User)}."] = patch
+            };
 
-            return Ok(new Dictionary<string, object>
-            {
-                { $"{nameof(Models.User)}.", patch }
-            });
+            return Ok(new { data = result, ok = true});
         }
     }    
 }

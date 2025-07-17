@@ -26,7 +26,12 @@ namespace _2048_dev_server.Controllers
                 .FirstOrDefault(u => u.UserId == request.UserId);
 
             if (user == null)
-                return Unauthorized();
+                return Unauthorized(new { 
+                    error = new ApiError {
+                        code = "Unauthorized", 
+                        message = "user is null", 
+                        field = "UserId"
+                    }});
 
             // 이미 바인딩된 타입이 아니면 추가
             if (!user.UserIdpBindings.Any(b => b.LoginType == request.LoginType))
@@ -43,11 +48,12 @@ namespace _2048_dev_server.Controllers
             {
                 { $"{nameof(Models.User.UserIdpBindings)}", user.UserIdpBindings.Select(b => b.LoginType).ToList() }
             };
+            
+            var result = new Dictionary<string, object> {
+                [$"{nameof(Models.User)}."] = patch
+            };
 
-            return Ok(new Dictionary<string, object>
-            {
-                { $"{nameof(Models.User)}.", patch }
-            });
+            return Ok(new { data = result, ok = true});
         }
         
         [HttpPost("unbind")]
@@ -58,7 +64,12 @@ namespace _2048_dev_server.Controllers
                 .FirstOrDefault(u => u.UserId == request.UserId);
 
             if (user == null)
-                return Unauthorized();
+                return Unauthorized(new { 
+                    error = new ApiError {
+                        code = "Unauthorized", 
+                        message = "user is null", 
+                        field = "UserId"
+                    }});
 
             var target = user.UserIdpBindings.FirstOrDefault(b => b.LoginType == request.LoginType);
             if (target != null)
@@ -72,10 +83,11 @@ namespace _2048_dev_server.Controllers
                 { $"{nameof(Models.User.UserIdpBindings)}", user.UserIdpBindings.Select(b => b.LoginType).ToList() }
             };
 
-            return Ok(new Dictionary<string, object>
-            {
-                { $"{nameof(Models.User)}.", patch }
-            });
+            var result = new Dictionary<string, object> {
+                [$"{nameof(Models.User)}."] = patch
+            };
+
+            return Ok(new { data = result, ok = true});
         }
     }
 }

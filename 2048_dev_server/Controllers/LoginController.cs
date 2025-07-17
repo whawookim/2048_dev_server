@@ -2,13 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using _2048_dev_server.Models;
 using _2048_dev_server.Data;
-using System.Collections.Generic;
-using Newtonsoft.Json;
 
 namespace _2048_dev_server.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/login")]
     public class LoginController : ControllerBase
     {
         private readonly GameDbContext _db;
@@ -18,14 +16,21 @@ namespace _2048_dev_server.Controllers
             _db = db;
         }
 
-        [HttpPost("login")]
+        [HttpPost]
         public IActionResult Login([FromBody] LoginRequest request)
         {
+            Console.WriteLine($"[로그인 요청] LoginType: {request.LoginType}, UserId: {request.UserId}, Token: {request.Token}");
+
             return request.LoginType switch
             {
                 nameof(LoginType.Guest) => HandleGuestLogin(request),
                 nameof(LoginType.Google) => HandleGoogleLogin(request),
-                _ => BadRequest("Unsupported login type")
+                _ => BadRequest(new { 
+                        error = new ApiError {
+                            code = "InvalidParameter", 
+                            message = "Unsupported login type", 
+                            field = "LoginType"
+                        }})
             };
         }
 
@@ -52,9 +57,16 @@ namespace _2048_dev_server.Controllers
                 _db.SaveChanges();
             }
 
-            return Ok(new Dictionary<string, object> {
-                { $"{nameof(Models.User)}", AutoConvert.ToDictionary(user) }
-            });
+            var responseDict = AutoConvert.ToDictionary(user);
+
+            // 클라이언트 호환을 위해 가볍게 가공
+            responseDict[nameof(Models.User.UserIdpBindings)] = user.UserIdpBindings.Select(b => b.LoginType).ToList();
+
+            var result = new Dictionary<string, object> {
+                [nameof(Models.User)] = responseDict
+            };
+            
+            return Ok(new { data = result, ok = true});
         }
 
         private IActionResult HandleGoogleLogin(LoginRequest request)
@@ -80,9 +92,16 @@ namespace _2048_dev_server.Controllers
                 _db.SaveChanges();
             }
 
-            return Ok(new Dictionary<string, object> {
-                { $"{nameof(Models.User)}", AutoConvert.ToDictionary(user) }
-            });
+            var responseDict = AutoConvert.ToDictionary(user);
+
+            // 클라이언트 호환을 위해 가볍게 가공
+            responseDict[nameof(Models.User.UserIdpBindings)] = user.UserIdpBindings.Select(b => b.LoginType).ToList();
+
+            var result = new Dictionary<string, object> {
+                [nameof(Models.User)] = responseDict
+            };
+            
+            return Ok(new { data = result, ok = true });
         }
     }
 }

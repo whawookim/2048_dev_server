@@ -6,7 +6,7 @@ using _2048_dev_server.Models;
 namespace _2048_dev_server.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/scores")]
 public class ScoresController : ControllerBase
 {
     private readonly GameDbContext _db;

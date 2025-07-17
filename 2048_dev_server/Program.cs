@@ -32,6 +32,8 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseCors("AllowAll"); // 🔥 이 줄 추가
+
 // Swagger
 app.UseSwagger();
 app.UseSwaggerUI(c =>
@@ -44,6 +46,8 @@ app.UseSwaggerUI(c =>
 //app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.MapGet("/", () => "2048 server is running"); // 🔥 루트 응답 추가
 
 // 컨트롤러 엔드포인트
 app.MapControllers();
