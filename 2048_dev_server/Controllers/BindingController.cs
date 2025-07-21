@@ -2,8 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using _2048_dev_server.Models;
 using _2048_dev_server.Data;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace _2048_dev_server.Controllers
 {

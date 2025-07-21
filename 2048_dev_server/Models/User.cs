@@ -22,9 +22,3 @@ public class UserIdpBinding
     public string LoginType { get; set; }  // "Google", "Guest"
     public User User { get; set; }
 }
-
-public class UserRequest
-{
-    public string Uuid { get; set; }
-    public string Nickname { get; set; }
-}

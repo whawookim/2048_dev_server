@@ -23,4 +23,86 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="publish\publish\publish\web.config" />
+      <_ContentIncludedByDefault Remove="publish\publish\web.config" />
+      <_ContentIncludedByDefault Remove="publish\web.config" />
+      <_ContentIncludedByDefault Remove="publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\2048_dev_server.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+
 </Project>
